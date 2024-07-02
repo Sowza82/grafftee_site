@@ -1,4 +1,3 @@
-# grafftee_site
 # Grafftee
 
 Grafftee é um site de estampas em camisa, oferecendo opções de atacado e varejo. Os usuários podem comprar camisas já estampadas ou personalizar suas próprias estampas.
@@ -30,3 +29,24 @@ Este projeto foi desenvolvido durante a primeira trilha no curso Descodificadas.
 
 ## Estrutura do Projeto
 
+Grafftee/
+│
+├── index.html
+├── cadastro.html
+├── contato.html
+├── loja.html
+├── sobre.html
+│
+├── css/
+│ ├── style.css
+│
+├── js/
+│ ├── script.js
+│
+├── imgs/
+│ ├── principal/
+│ ├── foto_fundo.jpg
+│ ├── logos/
+│ ├── logo.png
+│
+└── README.md
