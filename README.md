@@ -27,26 +27,4 @@ Este projeto foi desenvolvido durante a primeira trilha no curso Descodificadas.
 - **GPT (ChatGPT)**: Gerador de textos.
 - **Notebook e Celular**: Dispositivos utilizados durante o desenvolvimento.
 
-## Estrutura do Projeto
 
-Grafftee/
-│
-├── index.html
-├── cadastro.html
-├── contato.html
-├── loja.html
-├── sobre.html
-│
-├── css/
-│ ├── style.css
-│
-├── js/
-│ ├── script.js
-│
-├── imgs/
-│ ├── principal/
-│ ├── foto_fundo.jpg
-│ ├── logos/
-│ ├── logo.png
-│
-└── README.md
