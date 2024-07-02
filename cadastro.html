@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafftee</title>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body>
+    <header class="barra-navegacao">
+        <div class="logo">
+            <img src="imgs/principal/logo.jpg" alt="Logo GraffTee">
+            GraffTee
+        </div>
+        <div class="icone-menu">&#9776;</div> 
+        <nav class="menu-lateral">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="loja.html">Loja</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <nav class="navegacao-desktop">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="loja.html">Loja</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="pagina-inicial">
+        <h1>Seja Bem-vindo!</h1>
+        <p>Descubra nossos serviços e ofertas especiais.</p>
+        <div class="container-pesquisa">
+            <input type="text" placeholder="Pesquisar...">
+            <button>Buscar</button>
+        </div>
+    </div>
+
+    <div class="faixa">
+        <h2>Estampas diversos modelos</h2>
+    </div>
+    
+        <main class="container-principal">
+            <div class="container-imagem">
+                <img src="imgs/principal/foto fundo.jpg" alt="Imagem de Fundo">
+            </div>
+            <div class="container-formulario">
+                <h2>Preencha o Formulário</h2>
+                <form id="meuFormulario" action="/submit_form" method="post">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+        
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(xx) xxxxx-xxxx">
+        
+                    <label for="genero">Gênero:</label>
+                    <select id="genero" name="genero" required>
+                        <option value="">Selecione</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+        
+                    <label for="data_nascimento">Data de Nascimento:</label>
+                    <input type="date" id="data_nascimento" name="data_nascimento" required>
+        
+                    <label for="nacionalidade">Nacionalidade:</label>
+                    <select id="nacionalidade" name="nacionalidade" required>
+                        <option value="">Selecione</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="EUA">Estados Unidos</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Canadá">Canadá</option>
+                        <option value="França">França</option>
+                        <option value="Alemanha">Alemanha</option>
+                        <option value="Espanha">Espanha</option>
+                        <option value="Itália">Itália</option>
+                        <option value="Japão">Japão</option>
+                        <option value="China">China</option>
+                        
+                    </select>
+        
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="BA">Bahia</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="PR">Paraná</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="CE">Ceará</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="TO">Tocantins</option>
+                        
+                    </select>
+        
+                    <label for="cidade">Cidade:</label>
+                    <select id="cidade" name="cidade" required>
+                        <option value="">Selecione</option>
+                        <option value="São Paulo">São Paulo</option>
+                        <option value="Campinas">Campinas</option>
+                        <option value="Santos">Santos</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="Niterói">Niterói</option>
+                        <option value="Petrópolis">Petrópolis</option>
+                        <option value="Belo Horizonte">Belo Horizonte</option>
+                        <option value="Porto Alegre">Porto Alegre</option>
+                        <option value="Salvador">Salvador</option>
+                        <option value="Curitiba">Curitiba</option>
+                        <option value="Recife">Recife</option>
+                        <option value="Fortaleza">Fortaleza</option>
+                        <option value="Brasília">Brasília</option>
+                        <option value="Florianópolis">Florianópolis</option>
+                        <option value="Manaus">Manaus</option>
+                        <option value="Goiânia">Goiânia</option>
+                        <option value="Belém">Belém</option>
+                        <option value="João Pessoa">João Pessoa</option>
+                        <option value="Natal">Natal</option>
+                        <option value="Aracaju">Aracaju</option>
+                        <option value="Vitória">Vitória</option>
+                        <option value="Cuiabá">Cuiabá</option>
+                        <option value="Campo Grande">Campo Grande</option>
+                        <option value="Porto Velho">Porto Velho</option>
+                        <option value="Palmas">Palmas</option>
+                        
+                    </select>
+        
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </main>
+        
+    <footer>
+        <div>
+            <span>GraffTee</span>
+            <p>Email:grafftee@gmail.com.br</p>
+            Tel:(71)99999-8888
+        </div>
+        <div class="coluna-rodape">
+            <h3>Saiba mais</h3>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="loja.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="cadastro.html">Trabalhe conosco</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="coluna-rodape">
+            <h3>Contato</h3>
+            <div class="redes-sociais">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/sowza82-tatiane-souza/">LinkedIn</a></li>
+                    <li><a href="https://www.instagram.com/tathysowza_82/">Instagram</a></li>
+                    <li><a href="https://github.com/Sowza82">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="coluna-rodape">
+            <h3>Inscreva-se para receber novidades</h3>
+            <div class="inscricao">
+                <input type="email" placeholder="Seu e-mail">
+                <button>Inscrever</button>
+            </div>
+        </div>
+
+        <div class="coluna-rodape creditos">
+            <p>@2024 Desenvolvido por Tatiane Souza</p>
+        </div>
+    </footer>
+
+    <button id="voltar-ao-topo" title="Voltar ao Topo">&#8679;</button>
+
+    <script src="./js/home.js"></script>
+
+</body>
+</html>
