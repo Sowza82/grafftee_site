@@ -191,7 +191,9 @@
     color: white;
     cursor: pointer;
   }
-  
+  .container-pesquisa button:hover {
+    background-color:var(--header-link-hover-color);
+}
   .faixa {
     text-align: center;
     padding: 20px;
@@ -267,7 +269,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #0056b3;
+    background-color:var(--header-link-hover-color);
 }
 
 .mapa iframe {

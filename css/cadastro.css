@@ -191,7 +191,9 @@
     color: white;
     cursor: pointer;
   }
-   
+  .container-pesquisa button:hover {
+    background-color:var(--header-link-hover-color);
+} 
   .faixa {
     text-align: center;
     padding: 20px;
@@ -268,7 +270,7 @@
 }
 
 .container-formulario button:hover {
-    background-color: #555;
+    background-color:var(--header-link-hover-color);
 }
 
 /* Media query para dispositivos móveis */
