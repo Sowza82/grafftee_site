@@ -208,18 +208,18 @@
 
 /* Estilo para a imagem */
 .container-imagem {
-    flex: 1 1 40%; /* Largura ajustável conforme necessário */
-    margin-right: 20px; /* Espaçamento entre imagem e formulário */
+    flex: 1 1 40%; 
+    margin-right: 20px;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 300px; /* Altura fixa para a imagem */
+    height: 300px; 
 }
 
 .container-imagem img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Para garantir que a imagem cubra todo o espaço */
+    object-fit: cover;
     display: block;
     transition: transform 0.3s ease-in-out;
 }
@@ -231,7 +231,7 @@
 
 /* Estilo para o formulário */
 .container-formulario {
-    flex: 1 1 50%; /* Largura ajustável conforme necessário */
+    flex: 1 1 50%; 
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -274,21 +274,21 @@
 /* Media query para dispositivos móveis */
 @media (max-width: 768px) {
     .container-principal {
-        flex-direction: column; /* Empilhar elementos em dispositivos móveis */
+        flex-direction: column; 
     }
 
     .container-imagem,
     .container-formulario {
-        flex-basis: 100%; /* Largura total em dispositivos móveis */
-        margin-right: 0; /* Remover margem entre elementos */
+        flex-basis: 100%; 
+        margin-right: 0; 
     }
 
     .container-imagem {
-        height: 200px; /* Altura reduzida para dispositivos móveis */
+        height: 200px; 
     }
 }
 
-  .container-pesquisa button,
+.container-pesquisa button,
 .container-formulario button,
 .inscricao button {
     padding: 10px 20px;
@@ -298,14 +298,14 @@
     background-color: var(--primary-color);
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves para cor de fundo e texto */
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .container-pesquisa button:hover,
 .container-formulario button:hover,
 .inscricao button:hover {
-    background-color: var(--header-link-hover-color); /* Cor de fundo ao passar o mouse */
-    color: var(--text-color); /* Cor do texto ao passar o mouse */
+    background-color: var(--header-link-hover-color); 
+    color: var(--text-color); 
 }
 
 /* Estilo do Footer */
@@ -460,19 +460,17 @@ nav ul li a:hover,
 
 /* Estilos adicionais para o botão de voltar ao topo */
 #voltar-ao-topo {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 50%;
-    cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
 }
-
 #voltar-ao-topo:hover {
   background-color:var(--header-link-hover-color);
 }

@@ -336,7 +336,6 @@ button.esvaziar-sacola:hover {
     align-items: center; 
     margin-top: 20px;
 }
-
 /* Estilo do Footer */
 footer {
     background-color: var(--footer-background-color);
@@ -347,151 +346,148 @@ footer {
     justify-content: space-around;
     align-items: flex-start;
     font-size: 14px;
-}
-
-.coluna-footer {
+  }
+  
+  .coluna-footer {
     flex: 1 1 300px; 
     margin-right: 20px;
-    margin-bottom: 20px; 
-}
-
-.coluna-footer h3 {
+    margin-bottom: 20px; /* Adicionado para espaçamento inferior */
+  }
+  
+  .coluna-footer h3 {
     margin-bottom: 10px;
-}
-
-.coluna-footer nav ul {
+  }
+  
+  .coluna-footer nav ul {
     list-style-type: none;
-    padding: 0; 
-}
-
-.coluna-footer nav ul li {
+    padding: 0; /* Remover padding padrão */
+  }
+  
+  .coluna-footer nav ul li {
     margin-bottom: 5px;
-}
-
-.coluna-footer nav ul li a {
+  }
+  
+  .coluna-footer nav ul li a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease, opacity 0.3s ease;
     opacity: 1; 
-}
-
-.coluna-footer nav ul li a:hover {
+  }
+  
+  .coluna-footer nav ul li a:hover {
     color: var(--header-link-hover-color);
-    opacity: 0.8; 
-}
-
-/* Estilo para o texto "GraffTee", Email e Telefone */
-.coluna-footer span {
+    opacity: 0.8;
+  }
+  
+  /* Estilo para o texto "GraffTee", Email e Telefone */
+  .coluna-footer span {
     font-size: 18px;
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
-}
-
-.coluna-footer p {
+  }
+  
+  .coluna-footer p {
     font-size: 14px;
     margin: 5px 0; 
-}
-
-.redes-sociais {
+  }
+  
+  .redes-sociais {
     margin-top: 10px;
-}
-
-.redes-sociais ul {
+  }
+  
+  .redes-sociais ul {
     list-style-type: none;
     padding: 0;
     text-align: left; 
-}
-
-.redes-sociais ul li {
+  }
+  
+  .redes-sociais ul li {
     margin: 10px 0; 
-}
-
-.redes-sociais ul li a {
+  }
+  
+  .redes-sociais ul li a {
     color: #fff; 
     font-size: 20px;
     text-decoration: none;
     display: block;
-    transition: color 0.3s ease, opacity 0.3s ease; 
+    transition: color 0.3s ease, opacity 0.3s ease;
     opacity: 1; 
-}
-
-.redes-sociais ul li a:hover {
+  }
+  
+  .redes-sociais ul li a:hover {
     color: var(--header-link-hover-color);
     opacity: 0.8; 
-}
-
-.redes-sociais ul li a i {
+  }
+  
+  .redes-sociais ul li a i {
     font-size: 24px;
     margin-right: 5px;
-}
-
-.contato {
+  }
+  
+  .contato {
     grid-column: 2 / 3; 
-}
-
-.inscricao {
+  }
+  
+  .inscricao {
     grid-column: 3 / 4; 
-}
-
-nav ul li a:hover,
-.redes-sociais ul li a:hover,
-.inscricao ul li a:hover {
+  }
+  
+  nav ul li a:hover,
+  .redes-sociais ul li a:hover,
+  .inscricao ul li a:hover {
     color: var(--header-link-hover-color);
-    opacity: 0.8;
-}
-
-/* Estilo para o Botão "Inscrever" no Footer */
-.inscricao input {
+    opacity: 0.8; 
+  }
+  
+  /* Estilo para o Botão "Inscrever" no Footer */
+  .inscricao input {
     padding: 8px;
     margin-right: 5px;
     border: 1px solid #ccc;
-}
-
-.inscricao button {
+  }
+  
+  .inscricao button {
     padding: 8px 15px;
     background-color: var(--primary-color);
     color: #fff;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.inscricao button:hover {
+  }
+  
+  .inscricao button:hover {
     background-color: var(--header-link-hover-color); 
-}
-
-.creditos {
+  }
+  
+  .creditos {
     grid-column: 1 / -1; 
     color: var(--footer-text-color);
     padding: 10px 20px;
     text-align: center;
     font-size: 14px;
-}
-
-.creditos p {
+  }
+  
+  .creditos p {
     margin: 0;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     footer {
         grid-template-columns: 1fr; 
     }
-
+  
     .coluna-footer {
         margin-bottom: 20px; 
     }
-
+  
     .creditos {
         font-size: 14px; 
     }
-}
-
-
-
-
-/* Estilo para o Botão "Voltar ao Topo" */
-#voltar-ao-topo {
+  }
+  
+  /* Estilos adicionais para o botão de voltar ao topo */
+  #voltar-ao-topo {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -502,8 +498,7 @@ nav ul li a:hover,
     cursor: pointer;
     transition: background-color 0.3s ease;
     z-index: 1000;
-}
-
-#voltar-ao-topo:hover {
+  }
+  #voltar-ao-topo:hover {
     background-color:var(--header-link-hover-color);
-}
+  }
