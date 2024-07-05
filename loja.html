@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-EXAMPLEHASH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/loja.css">
@@ -15,7 +15,7 @@
             <img src="imgs/principal/logo.jpg" alt="Logo GraffTee">
             GraffTee
         </div>
-        <div class="icone-menu">&#9776;</div> <!-- Ícone do menu para mobile -->
+        <div class="icone-menu">&#9776;</div>
         <nav class="menu-lateral">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -43,14 +43,10 @@
         </div>
     </div>
 
-    <div class="faixa">
-        <h2>Nossos produtos</h2>
-    </div>
-    <section class="video-promocoes">
-        <h2>Promoções Especiais</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/seu_codigo_do_video" frameborder="0" allowfullscreen></iframe>
-    </section>
-    
+        <div class="faixa">
+            <h2>Nossos produtos</h2>
+        </div>
+
     <main>
         <div class="produtos">
             
@@ -58,108 +54,120 @@
                 <img src="./imgs/camisas/camisa14.jpg" alt="Produto 1">
                 <h3>Camisa Estampa Floral</h3>
                 <p>Camisa estampa floral<br>P M G GG XG<br>Atacado: R$ 65,00<br>Varejo: R$ 45,00<br></p>
-                <p class="preco">R$ 54,90</p>
-                <button class="adicionar-ao-carrinho"><i class="fas fa-shopping-cart"></i></button>
-                <button class="salvar"><i class="fas fa-heart"></i></button>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>
             </div>
             
             <div class="cartao-produto">
                 <img src="./imgs/camisas/camisa6.jpg" alt="Produto 2">
-                <h3>Camisa Estampa Geométrica</h3>
+                <h3> Estampa Geométrica</h3>
                 <p>Camisa estampa geométrica<br>P M G GG XG<br>Atacado: R$ 70,00<br>Varejo: R$ 50,00<br></p>
-                <p class="preco">R$ 59,90</p>
-                <button class="adicionar-ao-carrinho"><i class="fas fa-shopping-cart"></i></button>
-                <button class="salvar"><i class="fas fa-heart"></i></button>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>
             </div>
             
             <div class="cartao-produto">
                 <img src="./imgs/camisas/camisa5.jpg" alt="Produto 3">
-                <h3>Camisa Estampa Abstrata</h3>
+                <h3> Estampa Abstrata</h3>
                 <p>Camisa estampa abstrata<br>P M G GG XG<br>Atacado: R$ 72,00<br>Varejo: R$ 52,00<br></p>
-                <p class="preco">R$ 61,90</p>
-                <button class="adicionar-ao-carrinho"><i class="fas fa-shopping-cart"></i></button>
-                <button class="salvar"><i class="fas fa-heart"></i></button>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>
             </div>
             
             <div class="cartao-produto">
                 <img src="./imgs/camisas/camisa7.jpg" alt="Produto 4">
-                <h3>Camisa Estampa Animal Print</h3>
+                <h3> Estampa Animal Print</h3>
                 <p>Camisa estampa animal print<br>P M G GG XG<br>Atacado: R$ 68,00<br>Varejo: R$ 48,00<br></p>
-                <p class="preco">R$ 57,90</p>
-                <button class="adicionar-ao-carrinho"><i class="fas fa-shopping-cart"></i></button>
-                <button class="salvar"><i class="fas fa-heart"></i></button>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>
             </div>
            
             <div class="cartao-produto">
                 <img src="./imgs/camisas/camisa16.jpg" alt="Produto 5">
-                <h3>Camisa Estampa Floral Azul</h3>
+                <h3> Estampa Floral Azul</h3>
                 <p>Camisa estampa floral azul<br>P M G GG XG<br>Atacado: R$ 66,00<br>Varejo: R$ 46,00<br></p>
-                <p class="preco">R$ 55,90</p>
-                <button class="adicionar-ao-carrinho"><i class="fas fa-shopping-cart"></i></button>
-                <button class="salvar"><i class="fas fa-heart"></i></button>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>
             </div>
             
             <div class="cartao-produto">
                 <img src="./imgs/camisas/camisa8.jpg" alt="Produto 6">
-                <h3>Camisa Estampa Floral Rosa</h3>
+                <h3> Estampa Floral Rosa</h3>
                 <p>Camisa estampa floral rosa<br>P M G GG XG<br>Atacado: R$ 64,00<br>Varejo: R$ 44,00<br></p>
-                <p class="preco">R$ 53,90</p>
-                <button class="adicionar-ao-carrinho"><i class="fas fa-shopping-cart"></i></button>
-                <button class="salvar"><i class="fas fa-heart"></i></button>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>     
             </div>
            
             <div class="cartao-produto">
                 <img src="./imgs/camisas/camisa16.jpg" alt="Produto 7">
-                <h3>Camisa Estampa Floral Amarela</h3>
+                <h3> Estampa Floral Amarela</h3>
                 <p>Camisa estampa floral amarela<br>P M G GG XG<br>Atacado: R$ 67,00<br>Varejo: R$ 47,00<br></p>
-                <p class="preco">R$ 56,90</p>
-                <button class="adicionar-ao-carrinho"><i class="fas fa-shopping-cart"></i></button>
-                <button class="salvar"><i class="fas fa-heart"></i></button>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>
             </div>
            
             <div class="cartao-produto">
                 <img src="./imgs/camisas/camisa1.jpg" alt="Produto 8">
-                <h3>Camisa Estampa Listrada</h3>
+                <h3> Estampa Listrada</h3>
                 <p>Camisa estampa listrada<br>P M G GG XG<br>Atacado: R$ 63,00<br>Varejo: R$ 43,00<br></p>
-                <p class="preco">R$ 52,90</p>
-                <button class="adicionar-ao-carrinho"><i class="fas fa-shopping-cart"></i></button>
-                <button class="salvar"><i class="fas fa-heart"></i></button>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>
             </div>
             
             <div class="cartao-produto">
                 <img src="./imgs/camisas/camisa6.jpg" alt="Produto 9">
-                <h3>Camisa Estampa Floral Vermelha</h3>
+                <h3> Estampa Floral Vermelha</h3>
                 <p>Camisa estampa floral vermelha<br>P M G GG XG<br>Atacado: R$ 69,00<br>Varejo: R$ 49,00<br></p>
-                <p class="preco">R$ 58,90</p>
-                <button class="adicionar-ao-carrinho"><i class="fas fa-shopping-cart"></i></button>
-                <button class="salvar"><i class="fas fa-heart"></i></button>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>
             </div>
             
             <div class="cartao-produto">
                 <img src="./imgs/camisas/camisa14.jpg" alt="Produto 10">
-                <h3>Camisa Estampa Floral Preta</h3>
+                <h3> Estampa Floral Preta</h3>
                 <p>Camisa estampa floral preta<br>P M G GG XG<br>Atacado: R$ 71,00<br>Varejo: R$ 51,00<br></p>
-                <p class="preco">R$ 60,90</p>
-                <button class="adicionar-ao-carrinho"><i class="fas fa-shopping-cart"></i></button>
-                <button class="salvar"><i class="fas fa-heart"></i></button>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>
             </div>
             
             <div class="cartao-produto">
                 <img src="./imgs/camisas/camisa3.jpg" alt="Produto 11">
-                <h3>Camisa Estampa Floral Azul Marinho</h3>
+                <h3> Estampa Floral Azul Marinho</h3>
                 <p>Camisa estampa floral azul marinho<br>P M G GG XG<br>Atacado: R$ 73,00<br>Varejo: R$ 53,00<br></p>
-                <p class="preco">R$ 62,90</p>
-                <button class="adicionar-ao-carrinho"><i class="fas fa-shopping-cart"></i></button>
-                <button class="salvar"><i class="fas fa-heart"></i></button>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>
             </div>
             
             <div class="cartao-produto">
                 <img src="./imgs/camisas/camisa17.jpg" alt="Produto 12">
-                <h3>Camisa Estampa Floral Verde</h3>
+                <h3> Estampa Floral Verde</h3>
                 <p>Camisa estampa floral verde<br>P M G GG XG<br>Atacado: R$ 74,00<br>Varejo: R$ 54,00<br></p>
-                <p class="preco">R$ 63,90</p>
-                <button class="adicionar-ao-carrinho"><i class="fas fa-shopping-cart"></i></button>
-                <button class="salvar"><i class="fas fa-heart"></i></button>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>
+            </div>
+            <div class="cartao-produto">
+                <img src="./imgs/camisas/camisa14.jpg" alt="Produto 13">
+                <h3> Estampa Floral Preta</h3>
+                <p>Camisa estampa floral preta<br>P M G GG XG<br>Atacado: R$ 71,00<br>Varejo: R$ 51,00<br></p>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>
+            </div>
+            
+            <div class="cartao-produto">
+                <img src="./imgs/camisas/camisa3.jpg" alt="Produto 14">
+                <h3> Estampa Floral Azul Marinho</h3>
+                <p>Camisa estampa floral azul marinho<br>P M G GG XG<br>Atacado: R$ 73,00<br>Varejo: R$ 53,00<br></p>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>
+            </div>
+            
+            <div class="cartao-produto">
+                <img src="./imgs/camisas/camisa17.jpg" alt="Produto 15">
+                <h3> Estampa Floral Verde</h3>
+                <p>Camisa estampa floral verde<br>P M G GG XG<br>Atacado: R$ 74,00<br>Varejo: R$ 54,00<br></p>
+                <button class="carrinho"><i class="fas fa-shopping-cart"></i></button>
+                <button class="coracao"><i class="fas fa-heart"></i></button>
+                
             </div>
         </div>
 
@@ -168,6 +176,14 @@
             <button class="esvaziar-sacola" onclick="esvaziarSacola()">Esvaziar Sacola</button>
         </div>
     </main>
+        <div class="faixa">
+            <h2>Grafftee feita pra você</h2>
+        </div>
+
+    <section class="video-promocoes">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/qX93l9R6N00" frameborder="0" allowfullscreen></iframe>
+    </section>
+    
     
     <footer>
         <div class="coluna-footer">
@@ -192,11 +208,21 @@
             <h3>Contato</h3>
             <div class="redes-sociais">
                 <ul>
-                    <li><a href="https://www.linkedin.com/in/sowza82-tatiane-souza/" target="_blank">Linkedin<i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://www.instagram.com/tathysowza_82/" target="_blank"><i class="fab fa-instagram">Instagram</i></a></li>
-                    <li><a href="https://github.com/Sowza82" target="_blank"><i class="fab fa-github">Github</i></a></li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/sowza82-tatiane-souza/" target="_blank">
+                            <i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/tathysowza_82/" target="_blank">
+                            <i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Sowza82" target="_blank">
+                            <i class="fab fa-github"></i></a>
+                    </li>
                 </ul>
             </div>
+            
         </div>
 
         <div class="coluna-footer">
