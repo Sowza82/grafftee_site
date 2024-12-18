@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Grafftee - Loja online especializada em camisetas personalizadas, estampas prontas e serviços de impressão gráfica e serigrafia. Encontre o estilo que combina com você!">
+    <meta name="keywords" content="Grafftee, loja online, camisetas personalizadas, estampas prontas, impressão gráfica, serigrafia, produtos estampados, camisetas criativas, estamparia, serviços de impressão">
+    <meta name="author" content="Sowza Dev">
     <title>Grafftee</title>
     <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/home.css">
 </head>
+
 <body>
     <header class="barra-navegacao">
         <div class="logo">
@@ -18,7 +22,14 @@
         <div class="icone-menu">&#9776;</div>
         <nav class="menu-lateral">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li class="menu-dropdown">
+                    <a href="index.html" class="dropdown-toggle">Home</a>
+                    <ul class="submenu">
+                        <li><a href="#destaque">Destaque</a></li>
+                        <li><a href="#galeria">Estampas</a></li>
+                        <li><a href="#serviços">Serviços</a></li>
+                    </ul>
+                </li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="loja.html">Loja</a></li>
                 <li><a href="contato.html">Entrar</a></li>
@@ -26,14 +37,21 @@
         </nav>
         <nav class="navegacao-desktop">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li class="menu-dropdown">
+                    <a href="index.html" class="dropdown-toggle">Home</a>
+                    <ul class="submenu">
+                        <li><a href="#destaque">Destaque</a></li>
+                        <li><a href="#galeria">Estampas</a></li>
+                        <li><a href="#serviços">Serviços</a></li>   
+                    </ul>
+                </li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="loja.html">Loja</a></li>
                 <li><a href="contato.html">Entrar</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <div class="pagina-inicial">
         <h1>Seja Bem-vindo!</h1>
         <p>Descubra nossos serviços e ofertas especiais.</p>
@@ -42,78 +60,129 @@
             <button>Buscar</button>
         </div>
     </div>
-
+    
     <div class="faixa">
-        <h2>Estampas diversos modelos</h2>
+        <h1>Personalize Seus Estilos!</h1>
+        <p>Crie estampas exclusivas para camisetas, canecas, bolsas e mais. Soluções criativas com IA e design sob demanda.</p>
     </div>
-
-    <div class="container-carrossel">
-        <section id="inicio">
-            <div class="carrossel">
-                <img src="./imgs/principal/banner.jpg" alt="Imagem 1" class="ativo">
-                <img src="./imgs/principal/carrossel.jpg" alt="Imagem 2">
-                <img src="./imgs/principal/carrossel2.jpg" alt="Imagem 3">
-                <div class="controles" aria-label="Controles do Carrossel">
-                    <span class="anterior" aria-label="Slide Anterior">&#10094;</span>
-                    <span class="proximo" aria-label="Próximo Slide">&#10095;</span>
-                </div>
-            </div>
-        </section>
-    </div>
-
+    
+      
+          
+    <section id="destaque" class="container-carrossel">
+        <div class="carrossel">
+            <img src="./imgs/banner destaque/4.png" alt="Imagem 1 - Promoção especial de camisetas" class="ativo">
+            <img src="./imgs/banner destaque/1.png" alt="Imagem 2 - Nova coleção de estampas" class="carrossel-item">
+            <img src="./imgs/banner destaque/3.png" alt="Imagem 3 - Serviços personalizados de impressão" class="carrossel-item">
+            <img src="./imgs/banner destaque/2.png" alt="Imagem 4 - Nova coleção de estampas" class="carrossel-item">
+        </div>
+        <div class="controles" aria-label="Controles do Carrossel">
+            <span class="anterior" aria-label="Slide Anterior">&#10094;</span>
+            <span class="proximo" aria-label="Próximo Slide">&#10095;</span>
+        </div>
+    </section>
+    
     <main>
-        <h2 class="titulo-galeria">Galeria de Estampas</h2>
+        <h2 class="titulo-galeria">Explore Nossas Exclusivas Estampas</h2>
+          <p class="descricao-galeria">Descubra uma coleção única de estampas criativas e inspiradoras para todos os estilos. Da moda ao design de interiores, encontre a estampa perfeita que traz personalidade e elegância aos seus projetos.</p>
+
         <section id="galeria" class="galeria">
-            <div class="container-imagem">
-                <img src="./imgs/estampas/estampa2.jpeg" alt="Imagem 4">
-                <p class="descricao-imagem">Futurista</p>
+            <div class="card-imagem">
+                <img src="./imgs/estampas/estampa2.jpeg" alt="Estampa Futurista">
+                <p class="titulo-imagem">Futurista</p>
+                <p class="descricao-imagem">Estampa inspirada no futuro, com linhas geométricas e cores metálicas que remetem à tecnologia e à inovação.</p>
             </div>
-            <div class="container-imagem">
-                <img src="./imgs/estampas/estampa11.jpg" alt="Imagem 5">
-                <p class="descricao-imagem">Minimalista</p>
+            <div class="card-imagem">
+                <img src="./imgs/estampas/estampa11.jpg" alt="Estampa Minimalista">
+                <p class="titulo-imagem">Minimalista</p>
+                <p class="descricao-imagem">Design clean e simples, com poucos elementos e foco em formas básicas, criando uma sensação de tranquilidade e elegância.</p>
             </div>
-            <div class="container-imagem">
-                <img src="./imgs/estampas/estampa10.jpg" alt="Imagem 6">
-                <p class="descricao-imagem">Moderno</p>
+            <div class="card-imagem">
+                <img src="./imgs/estampas/estampa10.jpg" alt="Estampa Moderna">
+                <p class="titulo-imagem">Moderno</p>
+                <p class="descricao-imagem">Estampa com padrões inovadores e cores vibrantes, refletindo o estilo contemporâneo e a arte moderna.</p>
             </div>
-            <div class="container-imagem">
-                <img src="./imgs/estampas/estampa16.jpeg" alt="Imagem 7">
-                <p class="descricao-imagem">Futurista</p>
+            <div class="card-imagem">
+                <img src="./imgs/estampas/estampa16.jpeg" alt="Estampa Futurista">
+                <p class="titulo-imagem">Futurista</p>
+                <p class="descricao-imagem">Uma estampa que evoca o amanhã, com formas abstratas e tons de azul e cinza, dando um toque tecnológico ao visual.</p>
             </div>
-            <div class="container-imagem">
-                <img src="./imgs/estampas/estampa12.jpg" alt="Imagem 8">
-                <p class="descricao-imagem">Radical</p>
+            <div class="card-imagem">
+                <img src="./imgs/estampas/estampa12.jpg" alt="Estampa Radical">
+                <p class="titulo-imagem">Radical</p>
+                <p class="descricao-imagem">Estampa ousada e vibrante, com contrastes fortes e elementos visuais que quebram padrões tradicionais, criando um estilo arrojado.</p>
             </div>
-            <div class="container-imagem">
-                <img src="./imgs/estampas/estampa19.jpg" alt="Imagem 9">
-                <p class="descricao-imagem">Simples</p>
+            <div class="card-imagem">
+                <img src="./imgs/estampas/estampa19.jpg" alt="Estampa Simples">
+                <p class="titulo-imagem">Simples</p>
+                <p class="descricao-imagem">Uma estampa com um design simples e direto, que transmite um estilo mais discreto e sutil, perfeito para quem prefere o básico.</p>
             </div>
-            <div class="container-imagem">
-                <img src="./imgs/estampas/estampa4.jpg" alt="Imagem 10">
-                <p class="descricao-imagem">Exuberante</p>
+            <div class="card-imagem">
+                <img src="./imgs/estampas/estampa4.jpg" alt="Estampa Exuberante">
+                <p class="titulo-imagem">Exuberante</p>
+                <p class="descricao-imagem">Estampa rica em detalhes e cores vibrantes, com elementos florais e tropicais que trazem energia e vida ao ambiente.</p>
             </div>
-            <div class="container-imagem">
-                <img src="./imgs/estampas/estampa15.jpeg" alt="Imagem 11">
-                <p class="descricao-imagem">Vintage</p>
+            <div class="card-imagem">
+                <img src="./imgs/estampas/estampa15.jpeg" alt="Estampa Vintage">
+                <p class="titulo-imagem">Vintage</p>
+                <p class="descricao-imagem">Uma homenagem aos estilos antigos, com estampas retrô e tons desbotados que evocam um sentimento de nostalgia e tradição.</p>
             </div>
-            <div class="container-imagem">
-                <img src="./imgs/estampas/estampa6.jpg" alt="Imagem 12">
-                <p class="descricao-imagem">Radical</p>
+            <div class="card-imagem">
+                <img src="./imgs/estampas/estampa6.jpg" alt="Estampa Radical">
+                <p class="titulo-imagem">Radical</p>
+                <p class="descricao-imagem">Estampa cheia de atitude, com uma mistura de elementos gráficos ousados e cores fortes, ideal para quem gosta de um estilo sem medo de chamar atenção.</p>
             </div>
-            <div class="container-imagem">
-                <img src="./imgs/estampas/estampa8.jpg" alt="Imagem 13">
-                <p class="descricao-imagem">Abstrato</p>
+            <div class="card-imagem">
+                <img src="./imgs/estampas/estampa8.jpg" alt="Estampa Abstrata">
+                <p class="titulo-imagem">Abstrato</p>
+                <p class="descricao-imagem">Estampa com formas orgânicas e cores contrastantes, criando um efeito visual intrigante e expressivo, típica de estilos artísticos contemporâneos.</p>
             </div>
-            <div class="container-imagem">
-                <img src="./imgs/estampas/estampa5.jpg" alt="Imagem 14">
-                <p class="descricao-imagem">Tropical</p>
+            <div class="card-imagem">
+                <img src="./imgs/estampas/estampa5.jpg" alt="Estampa Tropical">
+                <p class="titulo-imagem">Tropical</p>
+                <p class="descricao-imagem">Estampa vibrante e colorida, com folhas tropicais e flores exóticas, trazendo a sensação de frescor e calor do clima tropical.</p>
             </div>
-            <div class="container-imagem">
-                <img src="./imgs/estampas/estampa3.jpg" alt="Imagem 15">
-                <p class="descricao-imagem">Dinâmico</p>
+            <div class="card-imagem">
+                <img src="./imgs/estampas/estampa3.jpg" alt="Estampa Dinâmica">
+                <p class="titulo-imagem">Dinâmico</p>
+                <p class="descricao-imagem">Estampa com movimentos fluídos e padrões em ação, criando uma sensação de velocidade e energia, perfeita para quem busca um design vibrante e moderno.</p>
             </div>
         </section>
     </main>
+    
+ 
+
+    <section id="serviços">
+        <h2 class="titulo-servicos">Nossos Serviços</h2>
+          <p class="descricao-servicos">Oferecemos soluções personalizadas e de alta qualidade para atender às suas necessidades. Com uma equipe especializada, garantimos um atendimento excepcional em cada etapa, sempre buscando inovação e excelência em nossos serviços.</p>
+
+        <div class="container-servicos">
+            <!-- Card 1 -->
+            <div class="card-servico">
+                <i class="fas fa-tshirt fa-3x"></i> 
+                <h3>Camisetas Personalizadas</h3>
+                <p>Crie estampas únicas para camisetas, com sua identidade ou ideia.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="card-servico">
+                <i class="fas fa-print fa-3x"></i> 
+                <h3>Impressão Gráfica</h3>
+                <p>Oferecemos serviços de impressão gráfica de alta qualidade para diversos produtos.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="card-servico">
+                <i class="fas fa-palette fa-3x"></i> 
+                <h3>Design Criativo</h3>
+                <p>Desenvolvemos estampas criativas para seus projetos, com base nas últimas tendências.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="card-servico">
+                <i class="fas fa-cogs fa-3x"></i> 
+                <h3>Serigrafia</h3>
+                <p>Especialistas em serigrafia, uma técnica durável e ideal para produções em grande escala.</p>
+            </div>
+        </div>
+    </section>
+    
     <footer>
         <div class="coluna-footer">
             <span>GraffTee</span>

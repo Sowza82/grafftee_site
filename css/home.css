@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Definição das variáveis para as cores */
 :root {
   --header-background-color: rgba(0, 0, 0, 1); 
@@ -11,19 +12,220 @@
   --header-link-hover-color: cyan; 
   --footer-background-color: rgba(0, 0, 0, 0.9); 
   --footer-text-color: white; 
-  --primary-color :#1a51e8;
+  --primary-color: #1a51e8;
   --background-color: #f1f3f4;
   --cor-texto: #333; 
-  --cor-fundo: #f5f5f5;
-
+  --cor-fundo: #333333;
 }
 
-/* Estilo para o Body */
+
+/* Body */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
   line-height: 1.6;
+}
+
+/* Animação suave de transição */
+html {
+  scroll-behavior: smooth;
+  transition: transform 0.3s ease;
+}
+
+/* Ícone do menu hamburguer */
+.icone-menu {
+  display: none; 
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  color: var(--header-text-color);
+}
+
+/* Menu lateral (hamburguer) */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+  padding: 60px 20px;
+  box-sizing: border-box;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+  display: flex; 
+  flex-direction: column; 
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column; 
+}
+
+.menu-lateral ul li {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+
+.menu-lateral ul li a {
+  text-decoration: none;
+  color: var(--footer-text-color);
+  font-size: 18px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.menu-lateral ul li a:hover {
+  color: var(--header-link-hover-color);
+}
+
+.menu-lateral.show {
+  left: 0;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  color: var(--header-text-color);
+  font-weight: bold;
+}
+
+.logo img {
+  max-width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* Navegação Desktop */
+.navegacao-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 10px 20px;
+}
+
+.navegacao-desktop ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px; 
+}
+
+
+.navegacao-desktop ul li {
+  margin-right: 20px;
+  position: relative; 
+}
+
+.navegacao-desktop ul li a {
+  text-decoration: none;
+  color: var(--header-text-color);
+  font-size: 18px;
+  padding: 10px 15px;
+  display: block; 
+}
+
+.navegacao-desktop ul li a:hover {
+  color: var(--header-link-hover-color);
+}
+
+/* Menu Dropdown */
+.menu-dropdown {
+  position: relative;
+  display: flex;
+}
+
+.menu-dropdown a {
+  color: var(--header-text-color);
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  background-color: #333;
+  padding: 10px 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  transition: opacity 0.3s ease-in-out;
+  width: max-content; 
+}
+.submenu.show {
+  display: block;
+  opacity: 1;
+}
+
+.submenu li {
+  padding: 8px 20px;
+}
+
+.submenu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+}
+
+.submenu li a:hover {
+  background-color: #444;
+}
+
+/* Mostrar o submenu apenas ao passar o mouse */
+.menu-dropdown:hover .submenu {
+  display: block; 
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+  .icone-menu {
+    display: block;
+  }
+
+  .menu-lateral {
+    display: flex;
+    flex-direction: column; 
+    padding: 60px 20px;
+  }
+
+  .navegacao-desktop {
+    display: none; 
+  }
+
+  .submenu {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+
+
+  .menu-dropdown > a {
+    padding: 10px;
+  }
+
+  
+  .menu-dropdown.show .submenu {
+    display: block;
+  }
 }
 
 .pagina-inicial {
@@ -64,107 +266,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
+  z-index: 1000; 
 }
-
-.icone-menu {
-  display: none; 
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.menu-lateral {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background-color: var(--footer-background-color);
-  color: var(--footer-text-color);
-  padding: 60px 20px;
-  box-sizing: border-box;
-  transition: left 0.3s ease;
-}
-
-.menu-lateral ul {
-  list-style: none;
-  padding: 0;
-}
-
-.menu-lateral ul li {
-  margin-bottom: 20px;
-}
-
-.menu-lateral ul li a {
-  text-decoration: none;
-  color: var(--footer-text-color);
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-.menu-lateral ul li a:hover {
-  color: var(--header-link-hover-color);
-}
-
-.menu-lateral.show {
-  left: 0;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 24px;
-  color: var(--text-color); 
-  font-weight: bold;
-}
-
-.logo img {
-  max-width: 60px;
-  height: auto;
-  border-radius: 50%;
-}
-
-.navegacao-desktop {
-  display: flex;
-  align-items: center; 
-}
-
-.navegacao-desktop ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navegacao-desktop ul li {
-  margin-right: 20px;
-}
-
-.navegacao-desktop ul li a {
-  text-decoration: none;
-  color: white; 
-  font-size: 18px;
-}
-
-.navegacao-desktop ul li a:hover {
-  color: var(--header-link-hover-color);
-}
-
-@media screen and (max-width: 768px) {
-  .menu-lateral {
-      left: -250px; 
-  }
-
-  .icone-menu {
-      display: block; 
-  }
-
-  .navegacao-desktop {
-      display: none; 
-  }
-}
-
 
 .container-pesquisa {
   display: flex;
@@ -194,120 +297,385 @@ body {
 .container-pesquisa button:hover {
   background-color:var(--header-link-hover-color);
 }
-  /* Estilos para o carrossel */
-.container-carrossel {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
-  }
-  
-  .carrossel img {
-    width: 100%;
-    display: none;
-  }
-  
-  .carrossel img.ativo {
-    display: block;
-  }
-  
-  .controles {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-  }
-  
-  .controles span {
-    cursor: pointer;
-    color: white;
-    font-size: 30px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.5);
-  }
-  
-  main {
-    padding: 50px 20px;
-  }
-  
-  .galeria{
-    display: grid;
-    gap: 20px;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  .titulo-galeria {
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    color: var(--text-color);
-  }
-  
-  .container-imagem {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .descricao-imagem {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px;
-    box-sizing: border-box;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .container-imagem:hover .descricao-imagem{
-    opacity: 1;
-  }
-  
-  .container-imagem:hover {
-    transform: scale(1.05);
-  }
-  
-  .container-imagem img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-  
-  @media (min-width: 1200px) {
-    .galeria {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .galeria {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  @media (max-width: 991px) {
-    .galeria {
-      grid-template-columns: 1fr;
-    }
-  }
-  
 
-  .faixa {
-    text-align: center;
-    padding: 20px;
-    background: var(--primary-color);
-    color: white;
+
+/* Faixa de boas-vindas */
+.faixa {
+  text-align: center;
+  padding: 20px;
+  background: var(--primary-color);
+  color: white;
 }
+
+.faixa h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.faixa p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+  .faixa h1 {
+      font-size: 2.2rem;
+  }
+
+  .faixa p {
+      font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .faixa h1 {
+      font-size: 2rem;
+  }
+
+  .faixa p {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .faixa h1 {
+      font-size: 1.8rem;
+  }
+
+  .faixa p {
+      font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .faixa h1 {
+      font-size: 1.6rem;
+  }
+
+  .faixa p {
+      font-size: 0.9rem;
+  }
+}
+
+
+/* Estilos gerais para a seção de destaque */
+
+#destaque {
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.container-carrossel {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.carrossel {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.carrossel img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carrossel img.ativo {
+  display: block;
+  opacity: 1;
+}
+
+.controles {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.controles span {
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.controles span:hover,
+.controles span:focus {
+  background-color: rgba(0, 0, 0, 0.8);
+  outline: none;
+}
+/* Estilo para o elemento <main> */
+main {
+  padding: 20px 10px; 
+  background-color: var(--background-color); 
+  margin-top: 60px; 
+  margin-bottom: 20px; 
+  width: 100%; 
+  min-height: calc(100vh - 100px); 
+  box-sizing: border-box; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+}
+
+/* Galeria de estampas */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+  background-color: var(--background-color);
+}
+
+/* Título da galeria */
+.titulo-galeria {
+  font-size: 2.5rem;
+  color: var(--cor-texto);
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Descrição da galeria */
+.descricao-galeria {
+  font-size: 1.2rem;
+  color: var(--cor-texto);
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Card de imagem */
+.card-imagem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efeito de hover no card */
+.card-imagem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-imagem img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Título fixo do card */
+.titulo-imagem {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+/* Descrição que aparece no hover */
+.descricao-imagem {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+/* Mostrar descrição ao passar o mouse */
+.card-imagem:hover .descricao-imagem {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1200px) {
+  .galeria {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  }
+}
+
+@media (max-width: 900px) {
+  .galeria {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria {
+      grid-template-columns: 1fr; 
+  }
+}
+
+@media (max-width: 400px) {
+  .titulo-galeria {
+      font-size: 24px; 
+  }
+
+  .titulo-imagem {
+      font-size: 14px; 
+  }
+
+  .descricao-imagem {
+      font-size: 14px; 
+  }
+
+  .descricao-galeria {
+      font-size: 1rem; 
+  }
+}
+
+
+/*Estilo dos serviços*/
+
+#serviços {
+  padding: 40px 0;
+  text-align: center;
+  background-color:var(--cor-fundo);
+}
+
+/* Título da seção de serviços */
+.titulo-servicos {
+  font-size: 2.5rem;
+  color: var(--background-color);
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Descrição da seção de serviços */
+.descricao-servicos {
+  font-size: 1.2rem;
+  color: var(--background-color);
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilo geral para as seções */
+@media (max-width: 1200px) {
+  .titulo-servicos {
+      font-size: 2.2rem; 
+  }
+
+  .descricao-servicos {
+      font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .titulo-servicos {
+      font-size: 2rem;
+  }
+
+  .descricao-servicos {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .titulo-servicos {
+      font-size: 1.8rem;
+  }
+
+  .descricao-servicos {
+      font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .titulo-servicos {
+      font-size: 1.6rem;
+  }
+
+  .descricao-servicos {
+      font-size: 0.9rem;
+  }
+}
+
+.container-servicos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-servico {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card-servico i {
+  color: #3498db; 
+  margin-bottom: 10px;
+}
+
+.card-servico h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.card-servico p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Efeito de hover */
+.card-servico:hover {
+  transform: scale(1.05);
+}
+
 /* Estilo do Footer */
 footer {
   background-color: var(--footer-background-color);
@@ -323,7 +691,7 @@ footer {
 .coluna-footer {
   flex: 1 1 300px; 
   margin-right: 20px;
-  margin-bottom: 20px; /* Adicionado para espaçamento inferior */
+  margin-bottom: 20px; 
 }
 
 .coluna-footer h3 {
@@ -332,7 +700,7 @@ footer {
 
 .coluna-footer nav ul {
   list-style-type: none;
-  padding: 0; /* Remover padding padrão */
+  padding: 0; 
 }
 
 .coluna-footer nav ul li {
@@ -351,7 +719,7 @@ footer {
   opacity: 0.8;
 }
 
-/* Estilo para o texto "GraffTee", Email e Telefone */
+/* Estilo contatos footer*/
 .coluna-footer span {
   font-size: 18px;
   font-weight: bold;
