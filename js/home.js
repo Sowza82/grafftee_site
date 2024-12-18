@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Selecionando elementos do menu lateral
-    const iconeMenu = document.querySelector ('.icone-menu');
+    const iconeMenu = document.querySelector  ( '.icone-menu');
     const barraLateral = document.querySelector('.menu-lateral');
     const voltarAoTopoButton = document.getElementById('voltar-ao-topo');
 
@@ -45,13 +45,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Avançar para a próxima imagem
     function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length; // Ciclo de imagens
+        currentIndex = (currentIndex + 1) % images.length; 
         showImage(currentIndex);
     }
 
     // Voltar para a imagem anterior
     prevButton.addEventListener('click', function () {
-        currentIndex = (currentIndex - 1 + images.length) % images.length; // Ciclo de imagens
+        currentIndex = (currentIndex - 1 + images.length) % images.length; 
         showImage(currentIndex);
     });
 
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Limpa qualquer submenu aberto na inicialização
     dropdownMenus.forEach(dropdown => {
         const dropdownContent = dropdown.querySelector('.submenu');
-        dropdownContent.style.display = 'none'; // Garante que todos os submenus comecem ocultos
+        dropdownContent.style.display = 'none';
     });
 
     dropdownMenus.forEach(dropdown => {
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Mostrar ou esconder o submenu ao clicar (para mobile)
         dropdown.addEventListener('click', function (event) {
             if (window.innerWidth < 768) {
-                event.stopPropagation(); // Impede o clique de propagar
+                event.stopPropagation(); 
                 const isVisible = dropdownContent.style.display === 'block';
                 dropdownContent.style.display = isVisible ? 'none' : 'block';
             }

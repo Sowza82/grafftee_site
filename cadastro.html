@@ -64,112 +64,85 @@
     </div>
     
     
-        <main class="container-principal">
-            <div class="container-imagem">
-                <img src="./imgs/principal/cadastro.webp" alt="Imagem de Fundo">
-            </div>
-            <div class="container-formulario">
-                <h2>Preencha o Formulário</h2>
-                <form id="meuFormulario" action="/submit_form" method="post">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-        
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
-        
-                    <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(xx) xxxxx-xxxx">
-        
-                    <label for="genero">Gênero:</label>
-                    <select id="genero" name="genero" required>
-                        <option value="">Selecione</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="feminino">Feminino</option>
-                        <option value="outro">Outro</option>
-                    </select>
-        
-                    <label for="data_nascimento">Data de Nascimento:</label>
-                    <input type="date" id="data_nascimento" name="data_nascimento" required>
-        
-                    <label for="nacionalidade">Nacionalidade:</label>
-                    <select id="nacionalidade" name="nacionalidade" required>
-                        <option value="">Selecione</option>
-                        <option value="Brasil">Brasil</option>
-                        <option value="EUA">Estados Unidos</option>
-                        <option value="Portugal">Portugal</option>
-                        <option value="Argentina">Argentina</option>
-                        <option value="Canadá">Canadá</option>
-                        <option value="França">França</option>
-                        <option value="Alemanha">Alemanha</option>
-                        <option value="Espanha">Espanha</option>
-                        <option value="Itália">Itália</option>
-                        <option value="Japão">Japão</option>
-                        <option value="China">China</option>
-                        
-                    </select>
-        
-                    <label for="estado">Estado:</label>
-                    <select id="estado" name="estado" required>
-                        <option value="">Selecione</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="MG">Minas Gerais</option>
-                        <option value="RS">Rio Grande do Sul</option>
-                        <option value="BA">Bahia</option>
-                        <option value="SC">Santa Catarina</option>
-                        <option value="PR">Paraná</option>
-                        <option value="DF">Distrito Federal</option>
-                        <option value="PE">Pernambuco</option>
-                        <option value="CE">Ceará</option>
-                        <option value="GO">Goiás</option>
-                        <option value="MA">Maranhão</option>
-                        <option value="PA">Pará</option>
-                        <option value="PB">Paraíba</option>
-                        <option value="RN">Rio Grande do Norte</option>
-                        <option value="SE">Sergipe</option>
-                        <option value="ES">Espírito Santo</option>
-                        <option value="MT">Mato Grosso</option>
-                        <option value="MS">Mato Grosso do Sul</option>
-                        <option value="RO">Rondônia</option>
-                        <option value="TO">Tocantins</option>
-                        
-                    </select>
-        
-                    <label for="cidade">Cidade:</label>
-                    <select id="cidade" name="cidade" required>
-                        <option value="">Selecione</option>
-                        <option value="São Paulo">São Paulo</option>
-                        <option value="Campinas">Campinas</option>
-                        <option value="Santos">Santos</option>
-                        <option value="Rio de Janeiro">Rio de Janeiro</option>
-                        <option value="Niterói">Niterói</option>
-                        <option value="Petrópolis">Petrópolis</option>
-                        <option value="Belo Horizonte">Belo Horizonte</option>
-                        <option value="Porto Alegre">Porto Alegre</option>
-                        <option value="Salvador">Salvador</option>
-                        <option value="Curitiba">Curitiba</option>
-                        <option value="Recife">Recife</option>
-                        <option value="Fortaleza">Fortaleza</option>
-                        <option value="Brasília">Brasília</option>
-                        <option value="Florianópolis">Florianópolis</option>
-                        <option value="Manaus">Manaus</option>
-                        <option value="Goiânia">Goiânia</option>
-                        <option value="Belém">Belém</option>
-                        <option value="João Pessoa">João Pessoa</option>
-                        <option value="Natal">Natal</option>
-                        <option value="Aracaju">Aracaju</option>
-                        <option value="Vitória">Vitória</option>
-                        <option value="Cuiabá">Cuiabá</option>
-                        <option value="Campo Grande">Campo Grande</option>
-                        <option value="Porto Velho">Porto Velho</option>
-                        <option value="Palmas">Palmas</option>
-                        
-                    </select>
-        
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-        </main>
+    <main class="container-principal">
+        <div class="container-imagem">
+            <img src="./imgs/principal/cadastro.webp" alt="Imagem de Fundo">
+        </div>
+        <div class="container-formulario">
+            <h2>Preencha o Formulário</h2>
+            <form id="meuFormulario" action="/submit_form" method="post" onsubmit="return validarFormulario()">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+    
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\) \d{5}-\d{4}" placeholder="(xx) xxxxx-xxxx" required>
+    
+                <label for="genero">Gênero:</label>
+                <select id="genero" name="genero" required>
+                    <option value="">Selecione</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+    
+                <label for="data_nascimento">Data de Nascimento:</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" required>
+    
+                <label for="nacionalidade">Nacionalidade:</label>
+                <select id="nacionalidade" name="nacionalidade" required>
+                    <option value="">Selecione</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="EUA">Estados Unidos</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Canadá">Canadá</option>
+                    <option value="França">França</option>
+                    <option value="Alemanha">Alemanha</option>
+                    <option value="Espanha">Espanha</option>
+                    <option value="Itália">Itália</option>
+                    <option value="Japão">Japão</option>
+                    <option value="China">China</option>
+                </select>
+    
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required onchange="atualizarCidades()">
+                    <option value="">Selecione</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="BA">Bahia</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="PR">Paraná</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="CE">Ceará</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+    
+                <label for="cidade">Cidade:</label>
+                <select id="cidade" name="cidade" required>
+                    <option value="">Selecione</option>
+                    <!-- Cidades serão inseridas dinamicamente pelo JavaScript -->
+                </select>
+    
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
         
     <footer>
         <div class="coluna-footer">

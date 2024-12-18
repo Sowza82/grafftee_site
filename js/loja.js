@@ -144,6 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
+   // ----------------------- Carrinho -----------------------
   
 // Definindo um array para armazenar os produtos no carrinho e favoritos
 let carrinho = [];
