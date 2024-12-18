@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const iconeMenu = document.querySelector('.icone-menu');
-    const barraLateral = document.querySelector ('.menu-lateral');
+    const barraLateral = document.querySelector('.menu-lateral');
 
     iconeMenu.addEventListener('click', function() {
         barraLateral.classList.toggle('show');

@@ -1,20 +1,34 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     // Selecionando elementos do menu lateral
-    const iconeMenu = document.querySelector  ( '.icone-menu');
+    const iconeMenu = document.querySelector('.icone-menu');
     const barraLateral = document.querySelector('.menu-lateral');
-    const voltarAoTopoButton = document.getElementById('voltar-ao-topo');
+    const voltarAoTopoButton = document.getElementById ('voltar-ao-topo');
 
     // Toggling da visibilidade da barra lateral
-    iconeMenu.addEventListener('click', function () {
+    iconeMenu.addEventListener('click', function() {
         barraLateral.classList.toggle('show');
     });
 
     // Remover a classe 'show' se a largura da tela for maior que 769px
-    window.addEventListener('resize', function () {
+    window.addEventListener('resize', function() {
         if (window.innerWidth >= 769) {
             barraLateral.classList.remove('show');
         }
     });
+
+    // Disparar evento de redimensionamento ao carregar a página
+    window.dispatchEvent(new Event('resize'));
+
+    // Controle do botão 'voltar ao topo'
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            voltarAoTopoButton.style.display = 'block';
+        } else {
+            voltarAoTopoButton.style.display = 'none';
+        }
+    });
+
+
 
     // Controle do botão 'voltar ao topo'
     window.addEventListener('scroll', function () {
@@ -110,6 +124,5 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-
-   
+  
 });

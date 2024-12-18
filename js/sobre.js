@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.dispatchEvent(new Event('resize'));
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () =>{
     const cabecalhos = document.querySelectorAll('.conteudo-secao h2');
 
     cabecalhos.forEach(cabecalho => {
@@ -27,13 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Atualizar o ícone
             const icone = cabecalho.querySelector('.icone-toggle');
             if (conteudo.classList.contains('ativo')) {
-                icone.innerHTML = '˄'; // Seta para cima
+                icone.innerHTML = '˄'; 
             } else {
-                icone.innerHTML = '˅'; // Seta para baixo
+                icone.innerHTML = '˅'; 
             }
         });
     });
 });
+
+// -----------------Botão voltar ao topo------------------------//
 
 window.addEventListener('scroll', function() {
     const voltarAoTopoButton = document.getElementById('voltar-ao-topo');

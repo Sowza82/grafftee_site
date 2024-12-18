@@ -37,16 +37,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Submenu: Mostrar ao passar o mouse (para desktop) ou ao clicar (para mobile)
-    const dropdownMenus = document.querySelectorAll('.menu-dropdown'); // Seleciona todos os menus dropdown
+    const dropdownMenus = document.querySelectorAll('.menu-dropdown'); 
 
     // Limpa qualquer submenu aberto na inicialização
     dropdownMenus.forEach(dropdown => {
         const dropdownContent = dropdown.querySelector('.submenu');
-        dropdownContent.style.display = 'none'; // Garante que todos os submenus comecem ocultos
+        dropdownContent.style.display = 'none';
     });
 
     dropdownMenus.forEach(dropdown => {
-        const dropdownContent = dropdown.querySelector('.submenu'); // Submenu
+        const dropdownContent = dropdown.querySelector('.submenu'); 
         
         // Mostrar o submenu ao passar o mouse (para desktop)
         dropdown.addEventListener('mouseenter', function() {
@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Mostrar ou esconder o submenu ao clicar (para mobile)
         dropdown.addEventListener('click', function(event) {
-            if (window.innerWidth < 768) { // Verifica se é mobile
-                event.stopPropagation(); // Impede o clique de propagar
+            if (window.innerWidth < 768) { 
+                event.stopPropagation(); 
                 const isVisible = dropdownContent.style.display === 'block';
                 dropdownContent.style.display = isVisible ? 'none' : 'block';
             }
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.dispatchEvent(new Event('resize'));
 });
 
-  
+
   window.addEventListener('scroll', function() {
     const voltarAoTopoButton = document.getElementById('voltar-ao-topo');
     if (window.scrollY > 100) {
@@ -119,13 +119,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Avançar para a próxima imagem
   function nextImage() {
-      currentIndex = (currentIndex + 1) % images.length; // Ciclo de imagens
+      currentIndex = (currentIndex + 1) % images.length; 
       showImage(currentIndex);
   }
 
   // Voltar para a imagem anterior
   prevButton.addEventListener('click', function () {
-      currentIndex = (currentIndex - 1 + images.length) % images.length; // Ciclo de imagens
+      currentIndex = (currentIndex - 1 + images.length) % images.length; 
       showImage(currentIndex);
   });
 
