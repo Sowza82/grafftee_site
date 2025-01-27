@@ -1,30 +1,39 @@
-# Grafftee
+# Grafftee - Trilha 1
 
-Grafftee é um site de estampas em camisa, oferecendo opções de atacado e varejo. Os usuários podem comprar camisas já estampadas ou personalizar suas próprias estampas.
+## Sobre a Trilha
 
-## Descrição do Projeto
+Esta é a **primeira etapa** do desenvolvimento do site **Grafftee**, realizada durante o curso **Descodificadas - Front End**. O objetivo principal foi transformar o site inicial, criado no **Google Sites**, em um site codificado usando **HTML** e **CSS**.
 
-Este projeto foi desenvolvido durante a primeira trilha no curso Descodificadas. Inicialmente, foi criado no Google Sites utilizando o modelo de evento. Posteriormente, o site foi desenvolvido utilizando HTML, CSS e JavaScript. O site possui as seguintes páginas:
-- Home
-- Cadastro
-- Contato
-- Loja
-- Sobre
+## O que foi desenvolvido?
 
-## Funcionalidades
+- **Estruturação do Site em HTML**:
+  - Criação das páginas **Home**, **Cadastro**, **Contato**, **Loja** e **Sobre**.
+  - Uso de tags semânticas para melhorar a organização e acessibilidade do conteúdo.
 
-- **Logo**: Logotipo do Grafftee.
-- **Imagem de Fundo com Texto Destacado**: Elemento visual principal da página inicial.
-- **Header e Footer**: Navegação e informações de rodapé presentes em todas as páginas.
-- **Imagens e Descrições**: Imagens das estampas e descrições detalhadas.
+- **Estilização com CSS**:
+  - Aplicação de cores, fontes, espaçamentos e layout responsivo.
+  - Ajustes para garantir uma experiência visual agradável e consistente com a identidade visual do projeto Grafftee.
 
-## Ferramentas Utilizadas
+- **Adaptação de Design**:
+  - Os elementos visuais e funcionais do Google Sites foram recriados em código.
+  - Inserção de logotipo, imagens de fundo e textos destacados.
 
-- **Visual Studio Code (VSCode)**: Ambiente de desenvolvimento.
-- **Google Sites**: Plataforma inicial de desenvolvimento.
+## Tecnologias Utilizadas
+
+- **HTML5**
+- **CSS3**
+- **VSCode**: Ambiente de desenvolvimento.
 - **Git e GitHub**: Controle de versão e repositório remoto.
-- **Replit**: Plataforma para testes durante o desenvolvimento.
-- **GPT (ChatGPT)**: Gerador de textos.
-- **Notebook e Celular**: Dispositivos utilizados durante o desenvolvimento.
+- **Google Sites**: Modelo inicial para transição.
 
+## Desafios e Soluções
 
+- **Desafio**: Recriar um design pré-estabelecido em código.
+  - **Solução**: Estudo detalhado da estrutura do site no Google Sites e planejamento do layout antes de codificar.
+
+- **Desafio**: Ajustar o layout para diferentes dispositivos.
+  - **Solução**: Uso de técnicas de design responsivo, como media queries e unidades relativas.
+
+## Progresso
+
+- **Conclusão da Fase 1**: O site agora possui uma estrutura codificada e estilizada, servindo de base para as próximas etapas de desenvolvimento.
