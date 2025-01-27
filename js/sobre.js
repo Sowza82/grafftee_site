@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.dispatchEvent(new Event('resize'));
 });
 
-document.addEventListener('DOMContentLoaded', () =>{
+document.addEventListener('DOMContentLoaded', () => {
     const cabecalhos = document.querySelectorAll('.conteudo-secao h2');
 
     cabecalhos.forEach(cabecalho => {
@@ -27,15 +27,13 @@ document.addEventListener('DOMContentLoaded', () =>{
             // Atualizar o ícone
             const icone = cabecalho.querySelector('.icone-toggle');
             if (conteudo.classList.contains('ativo')) {
-                icone.innerHTML = '˄'; 
+                icone.innerHTML = '˄'; // Seta para cima
             } else {
-                icone.innerHTML = '˅'; 
+                icone.innerHTML = '˅'; // Seta para baixo
             }
         });
     });
 });
-
-// -----------------Botão voltar ao topo------------------------//
 
 window.addEventListener('scroll', function() {
     const voltarAoTopoButton = document.getElementById('voltar-ao-topo');
@@ -53,46 +51,3 @@ voltarAoTopoButton.addEventListener('click', function() {
         behavior: 'smooth'
     });
 });
-
-
-  // ----------------------- Dropdown -----------------------
-  const dropdownMenus = document.querySelectorAll('.menu-dropdown');
-
-  // Limpa qualquer submenu aberto na inicialização
-  dropdownMenus.forEach(dropdown => {
-      const dropdownContent = dropdown.querySelector('.submenu');
-      dropdownContent.style.display = 'none'; // Garante que todos os submenus comecem ocultos
-  });
-
-  dropdownMenus.forEach(dropdown => {
-      const dropdownContent = dropdown.querySelector('.submenu');
-
-      // Mostrar o submenu ao passar o mouse (para desktop)
-      dropdown.addEventListener('mouseenter', function () {
-          dropdownContent.style.display = 'block';
-      });
-
-      // Esconder o submenu ao sair o mouse (para desktop)
-      dropdown.addEventListener('mouseleave', function () {
-          dropdownContent.style.display = 'none';
-      });
-
-      // Mostrar ou esconder o submenu ao clicar (para mobile)
-      dropdown.addEventListener('click', function (event) {
-          if (window.innerWidth < 768) {
-              event.stopPropagation(); // Impede o clique de propagar
-              const isVisible = dropdownContent.style.display === 'block';
-              dropdownContent.style.display = isVisible ? 'none' : 'block';
-          }
-      });
-  });
-
-  // Adicionar um event listener para fechar o submenu ao clicar fora dele em mobile
-  document.addEventListener('click', function (event) {
-      dropdownMenus.forEach(dropdown => {
-          const dropdownContent = dropdown.querySelector('.submenu');
-          if (!dropdown.contains(event.target)) {
-              dropdownContent.style.display = 'none';
-          }
-      });
-  });

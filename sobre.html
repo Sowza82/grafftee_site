@@ -3,61 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Grafftee - Loja online especializada em camisetas personalizadas, estampas prontas e serviços de impressão gráfica e serigrafia. Encontre o estilo que combina com você!">
-    <meta name="keywords" content="Grafftee, loja online, camisetas personalizadas, estampas prontas, impressão gráfica, serigrafia, produtos estampados, camisetas criativas, estamparia, serviços de impressão">
-    <meta name="author" content="Sowza Dev">
-    <title>Quem Somos</title>
+    <title>Quem somos</title>
     <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/sobre.css">
 </head>
-
-
 <body>
     <header class="barra-navegacao">
         <div class="logo">
             <img src="imgs/principal/logo.jpg" alt="Logo GraffTee">
             GraffTee
         </div>
-        <div class="icone-menu">&#9776;</div>
-    
-        <!-- Menu Lateral (Mobile) -->
+        <div class="icone-menu">&#9776;</div> 
         <nav class="menu-lateral">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li class="menu-dropdown">
-                    <a href="sobre.html" class="dropdown-toggle">Sobre</a>
-                    <ul class="submenu">
-                        <li><a href="#nossos-servicos"></a>Saiba mais</li>
-                        <li><a href="#depoimentos-clientes"></a>Depoimentos</li>
-                        <li><a href="#curiosidades">Curiosidades</a></li>
-                    </ul>
-                </li>
+                <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="loja.html">Loja</a></li>
                 <li><a href="contato.html">Entrar</a></li>
             </ul>
         </nav>
-    
-        <!-- Menu Desktop -->
         <nav class="navegacao-desktop">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li class="menu-dropdown">
-                    <a href="sobre.html" class="dropdown-toggle">Sobre</a>
-                    <ul class="submenu">
-                        <li><a href="#nossos-servicos">Saiba mais</a></li>
-                        <li><a href="#depoimentos-clientes">Depoimentos</a></li>
-                        <li><a href="#curiosidades">Novidades</a></li>
-                    </ul>
-                </li>
+                <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="loja.html">Loja</a></li>
                 <li><a href="contato.html">Entrar</a></li>
             </ul>
         </nav>
     </header>
-    
-    
 
     <div class="pagina-inicial">
         <h1>Seja Bem-vindo!</h1>
@@ -69,16 +44,15 @@
     </div>
 
     <div class="faixa">
-        <h1>Quem Somos</h1>
-        <p>Somos uma plataforma de personalização de produtos que transforma suas ideias em realidade. Combinamos criatividade, tecnologia e design para oferecer produtos exclusivos, feitos especialmente para você.</p>
+        <h2>Sobre a grafftee</h2>
     </div>
-    
- <main>
+    <main>
         <section class="secao-sobre">
             <div class="conteudo">
                 <img src="./imgs/principal/sobre varias 2.jpeg" alt="Exemplo de camiseta estampada">
                 <div class="conteudo-texto">
-                        <p>Bem-vindo à GrafTee!
+                    <h2>Quem Somos</h2>
+                    <p>Bem-vindo à GrafTee!
 
                         Na GrafTee, somos apaixonados por transformar simples camisetas em obras de arte. Fundada com a
                         missão de oferecer estilo e expressão através de estampas exclusivas, nossa loja é um destino
@@ -103,9 +77,11 @@
             </div>
         </section>
     </main>
+    <section class="faixa">
+        <h2>Saiba mais</h2>
+    </section>
     
-   <section cass="sobrenossa-empresa"> 
-      <article class="secao" id="nossos-produtos">
+    <article class="secao">
         <img src="./imgs/principal/grafica1.jpeg" alt="Exemplo de estampa">
         <div class="conteudo-secao">
             <h2>Nossos Produtos <span class="icone-toggle">˅</span></h2>
@@ -115,7 +91,7 @@
         </div>
     </article>
     
-    <article class="secao"  id="como-funciona">
+    <article class="secao">
         <img src="./imgs/principal/grafica2.jpeg" alt="Ilustração de processo">
         <div class="conteudo-secao">
             <h2>Como Funciona <span class="icone-toggle">˅</span></h2>
@@ -125,7 +101,7 @@
         </div>
     </article>
     
-    <article class="secao" id="por-que-escolher">
+    <article class="secao">
         <img src="./imgs/principal/grafica3.jpeg" alt="Compromisso com a criatividade">
         <div class="conteudo-secao">
             <h2>Por que Escolher a Grafftee? <span class="icone-toggle">˅</span></h2>
@@ -134,9 +110,9 @@
                 atendimento ao cliente é excepcional, garantindo sua satisfação em cada interação.</p>
         </div>
     </article>
-  </section>   
+    
 
-    <section class="nossos-servicos" id="nossos-servicos">
+    <section class="nossos-servicos">
         <h2>Nossos serviços</h2>
         <p>Na Graf Tee, oferecemos uma variedade de serviços para atender às necessidades dos nossos clientes mais
             exigentes. Desde a criação de designs personalizados até o cuidado especial com cada pedido, estamos
@@ -172,91 +148,26 @@
             produto até a entrega final. Obrigado por escolher Graf Tee para todas as suas necessidades de camisetas
             estampadas!</p>
     </section>
-        
-    <section class="depoimentos-clientes" id="depoimentos-clientes">
-        <h2>O que nossos clientes estão dizendo</h2>
-        <p>Veja o que nossos clientes têm a dizer sobre suas experiências com a Grafftee.</p>
     
-        <div class="depoimento">
-            <img src="./imgs/clientes/cliente2.jpg" alt="Cliente 1" class="foto-cliente">
-            <div class="conteudo-depoimento">
-                <p class="depoimento-texto">"Amei minha camiseta personalizada! O processo de escolha do design foi super fácil e o atendimento foi excelente. A qualidade é incrível!"</p>
-                <p class="nome-cliente">João Silva</p>
-            </div>
-        </div>
-    
-        <div class="depoimento">
-            <img src="./imgs/clientes/cliente5.jpg" alt="Cliente 2" class="foto-cliente">
-            <div class="conteudo-depoimento">
-                <p class="depoimento-texto">"Excelente experiência de compra. As estampas são únicas e a camiseta chegou super rápido. Com certeza vou comprar mais!"</p>
-                <p class="nome-cliente">Maria Oliveira</p>
-            </div>
-        </div>
-    
-        <div class="depoimento">
-            <img src="./imgs/clientes/cliente3.jpg" alt="Cliente 3" class="foto-cliente">
-            <div class="conteudo-depoimento">
-                <p class="depoimento-texto">"Fiquei encantada com a qualidade das estampas e o conforto das camisetas. Recebi várias elogios quando usei a minha!"</p>
-                <p class="nome-cliente">Ana Costa</p>
-            </div>
-        </div>
-    
-        <div class="depoimento">
-            <img src="./imgs/clientes/cliente 4.jpg" alt="Cliente 4" class="foto-cliente">
-            <div class="conteudo-depoimento">
-                <p class="depoimento-texto">"Eu adoro a Grafftee! A personalização das camisetas é super fácil de fazer, e o resultado final sempre me surpreende!"</p>
-                <p class="nome-cliente">Lucas Almeida</p>
-            </div>
-        </div>
+    <section class="produtos-em-destaque">
+        <h2>Produtos em Destaque</h2>
+        <p>Confira alguns dos nossos produtos mais populares e inspire-se para sua próxima compra!</p>
     </section>
     
+    <section class="como-encomendar">
+        <h2>Como Encomendar</h2>
+        <p>Saiba como é fácil encomendar sua camiseta personalizada na Grafftee e recebê-la diretamente em sua casa.</p>
+    </section>
     
-    <section class="contate-nos" id="contate-nos">
+    <section class="contate-nos">
         <h2>Contate-nos</h2>
-        <p>Estamos aqui para ajudar! Se você tem alguma dúvida ou precisa de mais informações sobre nossos produtos e serviços, fique à vontade para entrar em contato. Nossa equipe está pronta para responder às suas perguntas o mais rápido possível.</p>
-    
-        <div class="informacoes-contato">
-            <div class="item-contato">
-                <h3>Endereço</h3>
-                <p>Rua Exemplo, 123 - Bairro Centro - Cidade, Estado</p>
-            </div>
-            
-            <div class="item-contato">
-                <h3>Telefone</h3>
-                <p>+55 (71) 9999-9999</p>
-            </div>
-    
-            <div class="item-contato">
-                <h3>E-mail</h3>
-                <p>contato@grafftee.com.br</p>
-            </div>
-        </div>
-    
-        <h3>Redes Sociais</h3>
-        <p>Siga-nos nas redes sociais e fique por dentro de todas as novidades e lançamentos!</p>
-        
-        <div class="icones-redes-sociais">
-            <a href="https://www.facebook.com/empresa" target="_blank" class="icone-rede">
-                <i class="fab fa-facebook-f"></i> 
-            </a>
-            <a href="https://www.instagram.com/empresa" target="_blank" class="icone-rede">
-                <i class="fab fa-instagram"></i> 
-            </a>
-            <a href="https://www.twitter.com/empresa" target="_blank" class="icone-rede">
-                <i class="fab fa-twitter"></i> 
-            </a>
-            <a href="https://www.linkedin.com/company/empresa" target="_blank" class="icone-rede">
-                <i class="fab fa-linkedin-in"></i> 
-            </a>
-        </div>
+        <p>Estamos aqui para ajudar! Entre em contato conosco para mais informações sobre nossos produtos e serviços.</p>
     </section>
-  
-    
-        <section class="video-curiosidade" id="curiosidades">
-            <h2>Curiosidade</h2>
-            <p>A estampa é uma arte milenar que combina tradição e inovação. Ao longo dos séculos, diferentes culturas ao redor do mundo criaram estampas que simbolizam crenças, história e a estética de cada época. Do batik na Indonésia ao ikat no Oriente Médio, as estampas revelam muito sobre a identidade dos povos. No mundo das estampas contemporâneas, o design é impulsionado por tecnologias avançadas e influências globais, resultando em padrões únicos e inovadores.</p>
-            <iframe src="https://www.youtube.com/embed/DerKhc7qGOY" frameborder="0" allowfullscreen title="Vídeo de curiosidades"></iframe>
-        </section>
+
+    <section class="video-curiosidade">
+        <h2>Curiosidade</h2>
+        <iframe src="https://www.youtube.com/embed/DerKhc7qGOY" frameborder="0" allowfullscreen title="Vídeo de curiosidades"></iframe>
+    </section>
      
    
     <footer>
